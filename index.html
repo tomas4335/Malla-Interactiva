@@ -138,54 +138,43 @@ const datosRamos = {
     { nombre: "Ética y Bioética", id: "etica_y_bioetica", categoria: "general", requisitos:["desarrollo_personal_1"] }
   ],
   "Semestre 4": [
-    { nombre: "Preclínico de Enfermería", id: "preclinico_de_enfermeria", categoria: "general", requisitos: [""] },
-    { nombre: "Ginecología I", id: "ginecologia_1", categoria: "general", requisitos: ["sexualidad_humana", ""] },
-    { nombre: "Neonatología", id: "neonatologia", categoria: "general", requisitos: ["fisiología_humana", ""] },
+    { nombre: "Preclínico de Enfermería", id: "preclinico_de_enfermeria", categoria: "general", requisitos: ["Bases_de_enfermeria", "fisiología_humana"] },
+    { nombre: "Ginecología I", id: "ginecologia_1", categoria: "general", requisitos: ["sexualidad_humana", "fisiología_humana", "Bioquimica"] },
+    { nombre: "Neonatología", id: "neonatologia", categoria: "general", requisitos: ["fisiología_humana", "embriología_humana_y_genetica", "Bioquimica"] },
     { nombre: "Obstetricia", id: "Obstetricia", categoria: "general", requisitos: ["fisiología_humana", "embriología_humana_y_genetica", "Bioquimica"] },
     { nombre: "Farmacología", id: "farmacologia", categoria: "general", requisitos: ["fisiología_humana", "Bioquimica"] },
     { nombre: "Fisiopatología", id: "fisiopatologia", categoria: "general", requisitos: ["fisiología_humana", "Bioquimica"] },
   ],
   "Semestre 5": [
-    { nombre: "Preclínico Perinatal y Ginecológico", id: "preclinico_perinatal_y_ginecologico", categoria: "general", requisitos: ["obste1", "fisiopatologia"] },
-    { nombre: "Morbilidad Obstetrica y Neonatal", id: "morbilidad_obstetrica_y_neonatal", categoria: "general", requisitos: ["gine1", "fisiopatologia"] },
+    { nombre: "Preclínico Perinatal y Ginecológico", id: "preclinico_perinatal_y_ginecologico", categoria: "general", requisitos: ["preclinico_de_enfermeria", "Obstetricia", "neonatologia", "ginecologia_1", "farmacologia"] },
+    { nombre: "Morbilidad Obstetrica y Neonatal", id: "morbilidad_obstetrica_y_neonatal", categoria: "general", requisitos: ["Obstetricia", "neonatologia", "farmacologia", "fisiopatologia"] },
     { nombre: "Microbiología", id: "microbiologia", categoria: "general", requisitos: ["neo1", "fisiopatologia"] },
-    { nombre: "Administración", id: "administracion", categoria: "general", requisitos: ["bioestadistica"] },
-    { nombre: "Complementaria I", id: "complementaria_1", categoria: "general", requisitos: ["promocion2", "proceso_enfermeria"] },
+    { nombre: "Administración", id: "administracion", categoria: "general", requisitos: ["desarrollo_personal_II"] },
+    { nombre: "Complementaria I", id: "complementaria_1", categoria: "general"},
   ],
   "Semestre 6": [
-    { nombre: "Investigación en salud 2", id: "investigacion2", categoria: "investigacion", requisitos: ["investigacion1"] },
-    { nombre: "Sexualidad y sexología", id: "sexualidad", categoria: "clinica", requisitos: ["gine2"] },
-    { nombre: "Integración profesional", id: "integracion", categoria: "clinica", requisitos: ["obste2", "gine2", "neo2"] },
-    { nombre: "Psicología de la mujer", id: "psicologia_mujer", categoria: "psico", requisitos: ["psicologia"] },
-    { nombre: "Enfermería médico quirúrgica", id: "enfermeria_quirurgica", categoria: "clinica", requisitos: ["clinica_enfermeria"] },
-    { nombre: "Atención primaria ginecológica", id: "atencion_gine", categoria: "clinica", requisitos: ["gine2", "atencion_obste"] },
-    { nombre: "Inglés 3", id: "ingles3", categoria: "idioma", requisitos: ["ingles2"] }
+    { nombre: "Atención Perinatal y Ginecológica", id: "atencion_perinatal_y_ginecologica", categoria: "general", requisitos: ["preclinico_perinatal_y_ginecologico", "morbilidad_obstetrica_y_neonatal", "microbiologia"] },
+    { nombre: "Ginecología II", id: "ginecologia_II", categoria: "general", requisitos: ["ginecologia_1","farmacologia", "microbiologia"] },
+    { nombre: "Investigación Científica", id: "investigacion_cientifica", categoria: "general"},
+    { nombre: "Electiva I", id: "electiva_I", categoria: "general"},
   ],
   "Semestre 7": [
-    { nombre: "Proyecto de licenciatura 1", id: "licenciatura1", categoria: "investigacion", requisitos: ["investigacion2"] },
-    { nombre: "Gestión en salud 1", id: "gestion1", categoria: "publica", requisitos: ["atencion_gine"] },
-    { nombre: "Clínica de servicios gineco obstétricos 1", id: "clinica_gineco1", categoria: "clinica", requisitos: ["integracion", "atencion_gine"] },
-    { nombre: "Clínica en neonatología 1", id: "clinica_neo1", categoria: "clinica", requisitos: ["neo2", "integracion"] },
-    { nombre: "Proceso de intervención comunitaria", id: "intervencion_comunitaria", categoria: "publica", requisitos: ["integracion"] },
-    { nombre: "Optativo de formación general", id: "optativo1", categoria: "general" }
+    { nombre: "Gestión y Atención Gineco-Obstetrica Neonatal I", id: "gestion_y_atencion_gineco_obstetrica_neonatal_1", categoria: "general", requisitos: ["administracion", "atencion_perinatal_y_ginecologica", "ginecologia_II"] },
+    { nombre: "Seminario de Investigación", id: "seminario_de_investigacion", categoria: "general", requisitos: ["investigacion_cientifica"] },
   ],
   "Semestre 8": [
-    { nombre: "Proyecto de licenciatura 2", id: "licenciatura2", categoria: "investigacion", requisitos: ["licenciatura1"] },
-    { nombre: "Gestión en salud 2", id: "gestion2", categoria: "publica", requisitos: ["gestion1"] },
-    { nombre: "Clínica de servicios gineco obstétricos 2", id: "clinica_gineco2", categoria: "clinica", requisitos: ["clinica_gineco1"] },
-    { nombre: "Clínica en neonatología 2", id: "clinica_neo2", categoria: "clinica", requisitos: ["clinica_neo1"] },
-    { nombre: "Electivo de formación 1", id: "electivo1", categoria: "general" }
+    { nombre: "Gestión y Atención Gineco-Obstetrica Neonatal I", id: "gestion_y_atencion_gineco_obstetrica_neonatal_2", categoria: "general", requisitos: ["gestion_y_atencion_gineco_obstetrica_neonatal_1"] },
   ],
   "Semestre 9": [
-    { nombre: "Gestión en salud 3", id: "gestion3", categoria: "publica", requisitos: ["gestion2"] },
-    { nombre: "Internado intrahospitalario", id: "internado1", categoria: "clinica", requisitos: ["clinica_gineco2", "clinica_neo2"] },
-    { nombre: "Internado de atención primaria y comunitaria", id: "internado2", categoria: "publica", requisitos: ["intervencion_comunitaria"] },
-    { nombre: "Electivo de formación 2", id: "electivo2", categoria: "general" }
+    { nombre: "Clínica de Especialidades", id: "clinica_de_especialidades", categoria: "general"},
+    { nombre: "Gestión y Proyecto", id: "gestion_y_proyecto", categoria: "general"},
+
   ],
   "Semestre 10": [
-    { nombre: "Internado integral", id: "internado_integral", categoria: "clinica", requisitos: ["optativo1", "electivo1", "electivo2", "gestion3", "internado1", "internado2"] },
-    { nombre: "Trabajo de titulación", id: "titulacion", categoria: "investigacion" },
-    { nombre: "Examen de título", id: "examen", categoria: "investigacion" }
+    { nombre: "Habilitación Profesional", id: "habilitacion_profesional", categoria: "general"},
+  ]
+    "Semestre 11": [
+    { nombre: "Examen de Título", id: "examen_de_titulo", categoria: "general", requisitos: ["habilitacion_profesional"] },
   ]
 };
 
