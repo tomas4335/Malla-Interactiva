@@ -112,47 +112,45 @@
 
 <script>
 const datosRamos = {
-  "Semestre 1": [
-    { nombre: "Introducción a la profesión", id: "intro", categoria: "general" },
-    { nombre: "Química general y orgánica", id: "quimica", categoria: "basicas" },
-    { nombre: "Biología molecular de la célula", id: "biologia", categoria: "basicas" },
-    { nombre: "Anatomía general", id: "anatomia", categoria: "basicas" },
-    { nombre: "Taller de desarrollo personal", id: "taller", categoria: "general" }
+ "Semestre 1": [
+    { nombre: "Ingles Funcional I", id: "ingles_funcional_1", categoria: "general" },
+    { nombre: "Salud Pública", id: "salud_publica", categoria: "general" },
+    { nombre: "Psicología del Ciclo Vital", id: "psicología_del_ciclo_vital", categoria: "general" },
+    { nombre: "Antropología", id: "antropologia", categoria: "general" },
+    { nombre: "Fundamentos de la profesión", id: "fundamentos_de_la_profesión", categoria: "general" },
+    { nombre: "Anatomía Descriptiva", id: "anatomia_descriptiva", categoria: "general" }
   ],
   "Semestre 2": [
-    { nombre: "Salud pública", id: "salud_publica", categoria: "publica" },
-    { nombre: "Promoción y educación 1", id: "promocion1", categoria: "publica" },
-    { nombre: "Bioética y aspectos legales", id: "bioetica", categoria: "general" },
-    { nombre: "Morfología reproductiva", id: "morfologia", categoria: "clinica", requisitos: ["anatomia"] },
-    { nombre: "Bioquímica clínica", id: "bioquimica", categoria: "basicas", requisitos: ["quimica", "biologia"] },
-    { nombre: "Psicología del desarrollo", id: "psicologia", categoria: "psico" },
-    { nombre: "Inglés 1", id: "ingles1", categoria: "idioma" }
+    { nombre: "Desarrollo Personal I", id: "desarrollo_personal_1", categoria: "general", requisitos: ["psicología_del_ciclo_vital", "fundamentos_de_la_profesión"] },
+    { nombre: "Sociología", id: "sociologia", categoria: "general" },
+    { nombre: "Biología Celular y Tisular", id: "biologia_celular_y_tisular", categoria: "general" },
+    { nombre: "Química General y Orgánica Básica", id: "quimica_general_y_organica_basica", categoria: "general"},
+    { nombre: "Salud Familiar y Comunitaria", id: "Salud_familiar_y_comunitaria", categoria: "general", requisitos: ["psicología_del_ciclo_vital", "salud_publica"] },
+    { nombre: "Educación Para la Salud", id: "educacion_para_la_salud", categoria: "general" },
   ],
   "Semestre 3": [
-    { nombre: "Salud familiar", id: "salud_familiar", categoria: "publica", requisitos: ["salud_publica"] },
-    { nombre: "Promoción y educación 2", id: "promocion2", categoria: "publica", requisitos: ["salud_publica", "promocion1"] },
-    { nombre: "Epidemiología", id: "epidemiologia", categoria: "publica", requisitos: ["salud_publica"] },
-    { nombre: "Desarrollo embriofetal", id: "desarrollo_embriofetal", categoria: "clinica", requisitos: ["biologia", "morfologia"] },
-    { nombre: "Fisiología", id: "fisiologia", categoria: "basicas", requisitos: ["anatomia", "bioquimica"] },
-    { nombre: "Microbiología y parasitología clínica", id: "microbiologia", categoria: "basicas", requisitos: ["bioquimica"] },
-    { nombre: "Bioestadística", id: "bioestadistica", categoria: "investigacion" }
+    { nombre: "Bases de Enfermería", id: "Bases_de_enfermeria", categoria: "general", requisitos: ["biologia_celular_y_tisular", "anatomia_descriptiva"] },
+    { nombre: "Sexualidad Humana", id: "sexualidad_humana", categoria: "general", requisitos: ["psicología_del_ciclo_vital"] },
+    { nombre: "Fisiología Humana", id: "fisiología_humana", categoria: "general", requisitos: ["biología_celular_y_tisular", "quimica_general_y_organica_basica" ] },
+    { nombre: "Embriología Humana y Genética", id: "embriología_humana_y_genetica", categoria: "general", requisitos: ["biologia_celular_y_tisular", "anatomia_descriptiva"] },
+    { nombre: "Bioquímica", id: "Bioquimica", categoria: "basicas", requisitos: ["biología_celular_y_tisular", "quimica_general_y_organica_basica"] },
+    { nombre: "Desarrollo Personal II", id: "desarrollo_personal_II", categoria: "general", requisitos: ["desarrollo_personal_1"] },
+    { nombre: "Ética y Bioética", id: "etica_y_bioetica", categoria: "general", requisitos:["desarrollo_personal_1"] }
   ],
   "Semestre 4": [
-    { nombre: "Obstetricia 1", id: "obste1", categoria: "clinica", requisitos: ["salud_familiar", "desarrollo_embriofetal"] },
-    { nombre: "Ginecología 1", id: "gine1", categoria: "clinica", requisitos: ["salud_familiar", "desarrollo_embriofetal"] },
-    { nombre: "Neonatología 1", id: "neo1", categoria: "clinica", requisitos: ["salud_familiar", "desarrollo_embriofetal"] },
-    { nombre: "Proceso de atención de enfermería", id: "proceso_enfermeria", categoria: "clinica", requisitos: ["fisiologia", "microbiologia"] },
-    { nombre: "Farmacología general y gineco obstetricia", id: "farmacologia", categoria: "basicas", requisitos: ["bioquimica"] },
-    { nombre: "Fisiopatología", id: "fisiopatologia", categoria: "basicas", requisitos: ["fisiologia"] },
-    { nombre: "Inglés 2", id: "ingles2", categoria: "idioma", requisitos: ["ingles1"] }
+    { nombre: "Preclínico de Enfermería", id: "preclinico_de_enfermeria", categoria: "general", requisitos: [""] },
+    { nombre: "Ginecología I", id: "ginecologia_1", categoria: "general", requisitos: ["sexualidad_humana", ""] },
+    { nombre: "Neonatología", id: "neonatologia", categoria: "general", requisitos: ["fisiología_humana", ""] },
+    { nombre: "Obstetricia", id: "Obstetricia", categoria: "general", requisitos: ["fisiología_humana", "embriología_humana_y_genetica", "Bioquimica"] },
+    { nombre: "Farmacología", id: "farmacologia", categoria: "general", requisitos: ["fisiología_humana", "Bioquimica"] },
+    { nombre: "Fisiopatología", id: "fisiopatologia", categoria: "general", requisitos: ["fisiología_humana", "Bioquimica"] },
   ],
   "Semestre 5": [
-    { nombre: "Obstetricia 2", id: "obste2", categoria: "clinica", requisitos: ["obste1", "fisiopatologia"] },
-    { nombre: "Ginecología 2", id: "gine2", categoria: "clinica", requisitos: ["gine1", "fisiopatologia"] },
-    { nombre: "Neonatología 2", id: "neo2", categoria: "clinica", requisitos: ["neo1", "fisiopatologia"] },
-    { nombre: "Investigación en salud 1", id: "investigacion1", categoria: "investigacion", requisitos: ["bioestadistica"] },
-    { nombre: "Clínica proceso de enfermería", id: "clinica_enfermeria", categoria: "clinica", requisitos: ["promocion2", "proceso_enfermeria"] },
-    { nombre: "Atención primaria obstétrica", id: "atencion_obste", categoria: "clinica", requisitos: ["promocion2", "obste1"] }
+    { nombre: "Preclínico Perinatal y Ginecológico", id: "preclinico_perinatal_y_ginecologico", categoria: "general", requisitos: ["obste1", "fisiopatologia"] },
+    { nombre: "Morbilidad Obstetrica y Neonatal", id: "morbilidad_obstetrica_y_neonatal", categoria: "general", requisitos: ["gine1", "fisiopatologia"] },
+    { nombre: "Microbiología", id: "microbiologia", categoria: "general", requisitos: ["neo1", "fisiopatologia"] },
+    { nombre: "Administración", id: "administracion", categoria: "general", requisitos: ["bioestadistica"] },
+    { nombre: "Complementaria I", id: "complementaria_1", categoria: "general", requisitos: ["promocion2", "proceso_enfermeria"] },
   ],
   "Semestre 6": [
     { nombre: "Investigación en salud 2", id: "investigacion2", categoria: "investigacion", requisitos: ["investigacion1"] },
@@ -190,6 +188,7 @@ const datosRamos = {
     { nombre: "Examen de título", id: "examen", categoria: "investigacion" }
   ]
 };
+
 
 const categoriasColores = {
   basicas: "basicas",
